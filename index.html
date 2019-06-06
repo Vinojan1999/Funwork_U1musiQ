@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>U1 Records-Home</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" type="image/ico" href="img/Logo_of_U1_Records.png" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="music.css">
+  <script type="text/javascript" src="music.js"></script>
+  <script src="https://connect.soundcloud.com/sdk.js"></script>
+
+</head>
+
+<body>
+  
+  <div class="top-container">
+    <h1> <span class="fa fa-yoast"></span> <b class="a">Yuvan</b>MusiQ.com</h1> 
+    <h4>Music is a Piece of art that goes in the ears Straight to the Heart</h4>
+  </div>
+
+
+  <div ng-controller="NavbarCtrl" id="myHeader" class="navbar navbar-default navbar-static-top ng-scope">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="Index.html">
+        <span class="fa fa-yoast"></span> 
+          <b> U1</b>musiQ
+      </a>
+    </div>
+
+      <ul class="nav navbar-nav">
+          <li data-match-route="/$" class="home"><a href="#"><b>Home</b></a></li>
+          <li data-match-route="/$" class="Composers"><a href="#"><b>Composers</b></a></li>
+          <li data-match-route="/$" class="Directors"><a href="#"><b>Directors</b></a></li>
+          <li data-match-route="/$" class="Artist"><a href="#"><b>Artist</b></a></li>
+          <li data-match-route="/$" class="Singers"><a href="#"><b>Singers</b></a></li>
+      </ul>
+
+      <ul class="nav navbar-nav pull-right ng-scope" ng-if="!currentUser">
+          <li data-match-route="/login" class=""><a href="#"><b>Login / Register</b></a></li>
+      </ul>
+  </div>
+
+
+
+
+<div class="container ng-scope">
+  <div class="panel panel-default" id="box">
+
+
+      <div class="panel-heading ng-binding">
+
+              <div id="demo"> 
+                  <b>Best of Yuvan collections </b>
+              </div>
+      </div>
+
+
+<div class="panel-body">
+   <div class="row show-list">
+
+                  
+      <div class="filterDiv adventure action A">
+
+              <div class="col-xs-4 col-md-3 ng-scope" ng-repeat="show in shows | filter:query | orderBy:'rating':true">
+                <a href="Movie details.html">
+                  <img style="width: 250px;height:400px;" class="img-rounded" src="img/1.jpeg">
+                </a>
+                <div class="text-center">
+                  <a><b>Adi Yendi pulla</b></a> <br>
+                  <button type="button" id="start1">Start</button> 
+                  <button type="button" id="stop1">Stop</button>
+                </div>
+              </div>
+      </div>
+
+                  
+      <div class="filterDiv action adventure C">
+
+              <div class="col-xs-4 col-md-3 ng-scope" ng-repeat="show in shows | filter:query | orderBy:'rating':true">
+                <a href="/shows/72521">
+                  <img style="width: 250px;height:400px;" class="img-rounded" src="img/00.jpg">
+                </a>
+                <div class="text-center">
+                  <a><b>Adi Yendi pulla</b></a> <br>
+                  <button type="button" id="start2">Start</button> 
+                  <button type="button" id="stop2">Stop</button>
+                </div>
+              </div>
+      </div>
+
+                  
+      <div class="filterDiv action thriller T">
+
+              <div class="col-xs-4 col-md-3 ng-scope" ng-repeat="show in shows | filter:query | orderBy:'rating':true">
+                <a href="#">
+                  <img style="width: 250px;height:400px;" class="img-rounded" src="img/2.jpg">
+                </a>
+                <div class="text-center">
+                  <a><b>Adi Yendi pulla</b></a> <br>
+                  <button type="button" id="start3">Start</button> 
+                  <button type="button" id="stop3">Stop</button>
+                </div>
+              </div>
+      </div>
+
+
+                  
+      <div class="filterDiv documentary thriller adventure 0">
+
+              <div class="col-xs-4 col-md-3 ng-scope" ng-repeat="show in shows | filter:query | orderBy:'rating':true">
+                <a href="#">
+                  <img style="width: 250px;height:400px;" class="img-rounded" src="img/3.jpg">
+                </a>
+                <div class="text-center">
+                  <a><b>Adi Yendi pulla</b></a> <br>
+                  <button type="button" id="start4">Start</button> 
+                  <button type="button" id="stop4">Stop</button>
+                </div>
+              </div>
+      </div>
+
+                  
+      <div class="filterDiv animation comedy T">
+
+              <div class="col-xs-4 col-md-3 ng-scope" ng-repeat="show in shows | filter:query | orderBy:'rating':true">
+                <a href="#">
+                  <img style="width: 250px;height:400px;" class="img-rounded" src="img/5.jpg">
+                </a>
+                <div class="text-center">
+                  <a><b>Adi Yendi pulla</b></a> <br>
+                  <button type="button" id="start5">Start</button> 
+                  <button type="button" id="stop5">Stop</button>
+                </div>
+              </div>
+      </div>
+
+                  
+      <div class="filterDiv children action S">
+
+              <div class="col-xs-4 col-md-3 ng-scope" ng-repeat="show in shows | filter:query | orderBy:'rating':true">
+                <a href="#">
+                  <img style="width: 250px;height:400px;" class="img-rounded" src="img/6.jpg">
+                </a>
+                <div class="text-center">
+                  <a><b>Adi Yendi pulla</b></a> <br>
+                  <button type="button" id="start6">Start</button> 
+                  <button type="button" id="stop6">Stop</button>
+                </div>
+              </div>
+      </div>
+
+                  
+      <div class="filterDiv children J">
+
+              <div class="col-xs-4 col-md-3 ng-scope" ng-repeat="show in shows | filter:query | orderBy:'rating':true">
+                <a href="#">
+                  <img style="width: 250px;height:400px;" class="img-rounded" src="img/7.jpg">
+                </a>
+                <div class="text-center">
+                  <a><b>Adi Yendi pulla</b></a> <br>
+                  <button type="button" id="start7">Start</button> 
+                  <button type="button" id="stop7">Stop</button>
+                </div>
+              </div>
+      </div>
+
+
+      <div class="filterDiv crime thriller I">
+
+              <div class="col-xs-4 col-md-3 ng-scope" ng-repeat="show in shows | filter:query | orderBy:'rating':true">
+                <a href="#">
+                  <img style="width: 250px;height:400px;" class="img-rounded" src="img/0.jpg">
+                </a>
+                <div class="text-center">
+                  <a><b>Adi Yendi pulla</b></a> <br>
+                  <button type="button" id="start8">Start</button> 
+                  <button type="button" id="stop8">Stop</button>
+                </div>
+              </div>
+      </div>
+
+
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+
+
+<script type="text/javascript" src="JS/movie.js"></script>
+<script type="text/javascript" src="JS/heading.js"></script>
+<script type="text/javascript" src="JS/navigationbar.js"></script>
+
+
+
+</body>
+</html>

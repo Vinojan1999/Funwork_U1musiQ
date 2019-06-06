@@ -1,0 +1,29 @@
+.top-container{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    background-color: #333333;
+    padding: 30px;
+    text-align: center;
+    color: yellow;
+}
+
+.top-container:hover {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    background-image: url("img/u1 record.jpg");
+    padding: 30px;
+    text-align: center;
+    color:#333333;
+}
+
+div.panel-body {
+    background-image: url("img/u1.jpg");
+    background-size: cover;
+}
+
+body {
+    background-image: url("img/bg.jpg");
+    background-size: cover;
+}
+
+b:hover {
+    color: red;
+}
